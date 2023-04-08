@@ -9,7 +9,7 @@ declare module "bedrock-protocol" {
 
   export interface Options {
     // The string version to start the client or server as
-    version?: string
+    version?: Version
     // For the client, the host of the server to connect to (default: 127.0.0.1)
     // For the server, the host to bind to (default: 0.0.0.0)
     host: string
@@ -61,6 +61,7 @@ declare module "bedrock-protocol" {
       // The sub-header for the MOTD shown in the server list.
       levelName: string
     }
+    maxVersion: Version
     advertisementFn: () => ServerAdvertisement
   }
 
