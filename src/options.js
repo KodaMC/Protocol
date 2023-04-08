@@ -60,8 +60,6 @@ function validateOptions(options) {
   options.protocolVersion = Versions[options.version];
   options.maxProtocolVersion = Versions[options.maxVersion];
 
-  console.warn(options.protocolVersion, options.maxProtocolVersion);
-
   if (options.protocolVersion < MIN_VERSION) {
     throw new Error(
       `Protocol version < ${MIN_VERSION} : ${options.protocolVersion}, too old`
